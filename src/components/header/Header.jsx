@@ -10,7 +10,7 @@ const Header = () => {
             alt=""
             className="logo rounded-circle border-3"
           />
-          <h1 className="text-info"> ME-PERSEVANCE HOSPİTAL</h1>
+          <h1 className="text-info"> PERSEVERANCE HOSPITAL</h1>
         </div>
         <button className="btn btn-dark text-warning px-5 py-2 opacity-75">
           our doctor
