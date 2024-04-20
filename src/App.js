@@ -1,4 +1,6 @@
-import Login from "./pages/Login";
+
+
+import AppRouter from "./router/AppRouter";
 
 
 
@@ -6,8 +8,8 @@ import Login from "./pages/Login";
 function App() {
  
   return (
-    <div className="App">
-  <Login/>
+    <div>
+      <AppRouter/>
     </div>
   );
 }
