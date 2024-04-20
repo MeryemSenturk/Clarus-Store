@@ -1,12 +1,13 @@
-import AppRouter from "../src/router/AppRouter.js"
-import "./App.scss"
+import Login from "./pages/Login";
+
+
 
 
 function App() {
  
   return (
     <div className="App">
-  
+  <Login/>
     </div>
   );
 }
