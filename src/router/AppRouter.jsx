@@ -5,11 +5,14 @@ import Products from "../pages/Products";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const AppRouter = () => {
   return (
     <div>
       {/* <BrowserRouter> */}
+      <>
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
@@ -17,7 +20,8 @@ const AppRouter = () => {
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      {/* </BrowserRouter> */}
+        {/* </BrowserRouter> */}
+      </>
     </div>
   );
 }

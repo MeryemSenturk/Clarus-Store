@@ -10,7 +10,7 @@ const Login = () => {
     e.preventDefault();
     if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
       console.log({ email, pass });
-      // login({email,pass})
+      login({email,pass})  // AuthProviderda sign in için kullandık.
     } else {
       alert("Kullanıcı bilgileri yanlış");
     }
