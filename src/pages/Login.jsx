@@ -4,13 +4,13 @@ import { AuthContext } from "../contexts/AuthProvider";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
-  const {login}= useContext(AuthContext)
+  const { login } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
       console.log({ email, pass });
-      login({email,pass})  // AuthProviderda sign in için kullandık.
+      login({ email, pass });
     } else {
       alert("Kullanıcı bilgileri yanlış");
     }
@@ -18,7 +18,7 @@ const Login = () => {
   return (
     <div className="loginDiv">
       <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-[20px] p-5 flex flex-col justify-center text-center ">
-        <div className="flex justify-center items-center mt-3 gap-2 ">
+        <div className="flex justify-center items-center mt-2 gap-2 ">
           <span className="w-[6px] h-[39px] bg-yellow-500 "></span>
           <h1 className="text-[22px] sm:text-[32px] font-montserrat font-[700] uppercase ">
             Clarus Store
@@ -32,7 +32,7 @@ const Login = () => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col text-left p-3 gap-3 "
+          className="flex flex-col text-left p-3 gap-5 "
         >
           <div className="flex flex-col gap-2">
             <label
@@ -52,7 +52,7 @@ const Login = () => {
           </div>
           <div className="flex flex-col gap-2">
             <label
-              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin'] hover:after:text-black hover:after:pl-3 hover:after:underline"
+              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
               htmlFor="password"
             >
               Password

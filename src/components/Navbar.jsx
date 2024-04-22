@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router-dom";
 import { closeNavbar, logoutIcon, openNavbar } from "../helper/icons";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const navigation = [
   {
@@ -19,7 +20,8 @@ const navigation = [
 ];
 
 const Navbar = () => {
-    const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
+  const { logout } = useContext(AuthContext);
   return (
     <nav className="bg-navbarColor md:text-sm">
       <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
@@ -34,9 +36,10 @@ const Navbar = () => {
               Clarusway
             </span>
           </a>
+          {/**icon md ekranlardan sonra gizlensin diyoruz */}
           <div className="md:hidden">
             <button
-              className="menu-btn text-gray-500 hover:text-gray-800"
+              className="text-gray-500 hover:text-gray-800"
               onClick={() => setShow(!show)}
             >
               {show ? closeNavbar : openNavbar}
@@ -46,9 +49,9 @@ const Navbar = () => {
         <div
           className={`${
             show ? "flex flex-col pb-2" : "hidden"
-          }md:flex md:flex-row flex-1 items-center`}
+          } md:flex md:flex-row flex-1 items-center `}
         >
-          <ul className="space-y-6 md:flex md:space-x-6 md:space-y-6 ">
+          <ul className=" md:flex md:space-x-6">
             {navigation.map((item) => (
               <li
                 key={item.title}
@@ -65,7 +68,8 @@ const Navbar = () => {
           </ul>
           <div className="flex-1 gap-x-6 items-center justify-end mt-6 space-y-6 md:flex md:space-y-0 md:mt-0">
             <NavLink
-              to="/"
+              // to="/"
+              onClick={() => logout()}
               className="flex items-center justify-center gap-x-1 py-2 px-4 font-medium text-gray-700 hover:bg-main hover:text-white active:bg-gray-900 rounded-full md:inline-flex"
             >
               Logout {logoutIcon}
