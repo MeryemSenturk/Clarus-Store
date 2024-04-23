@@ -1,11 +1,28 @@
-import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 const ProductDetail = () => {
-  const params = useParams();
-  console.log(params);
-  const { state } = useLocation();
-  // console.log(location);
+  const navigate = useNavigate();
+  // const { state } = useLocation();//? navigate ile taşınan veriyi useLocation() hooku ile karşılayabiliyoruz. urlde yer alan parametreleri search ile yakalayabiliyoruz.
+
+  const { id } = useParams(); //* dinamik routelardaki parametreyi yakalar. route ayarlaması yaparken ne isim verdiysek useParams ile onu yakalarız.
+  // console.log(params);
+
+  const [state, setState] = useState({});
+
+  const getDetailData = async () => {
+    try {
+      const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
+      setState(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getDetailData();
+  }, []);
 
   const { thumbnail, title, description, category, price, images } = state;
   return (
@@ -47,10 +64,16 @@ const ProductDetail = () => {
               </div>
             </div>
             <div className="flex justify-end gap-3 mt-4">
-              <button className="border rounded-lg bg-labelColor text-white p-2">
+              <button
+                onClick={() => navigate(-1)}
+                className="border rounded-lg bg-labelColor text-white p-2"
+              >
                 Geri
               </button>
-              <button className="border rounded-lg bg-main text-white p-2">
+              <button
+                onClick={() => navigate("/dashboard")}
+                className="border rounded-lg bg-main text-white p-2"
+              >
                 Ana Sayfaya Dön
               </button>
             </div>
