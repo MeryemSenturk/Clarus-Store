@@ -14,7 +14,7 @@ const SearchInput = () => {
           type="search"
           onChange={(e) => setSearch(e.target.value)}
           id="default-search"
-          className="block outline-none w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:border-gray-900  focus:text-black"
+          className="block outline-none w-full p-4  mx-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:border-gray-900  focus:text-black"
           placeholder="Search products..."
           value={search}
         />
