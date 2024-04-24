@@ -1,11 +1,13 @@
 import React from "react";
+import Stats from "../components/Stats"
 import Testimonial from "../components/Testimonial";
-import Stats from "../components/Stats";
+
+
 
 const Home = () => {
   return (
     <div>
-      <Stats />
+      <Stats/>
       <Testimonial />
     </div>
   );

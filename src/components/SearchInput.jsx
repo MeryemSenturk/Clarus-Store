@@ -12,11 +12,12 @@ const SearchInput = () => {
         </div>
         <input
           type="search"
-          onChange={(e) => setSearch(e.target.value)}
+          onChange={(e)=>setSearch(e.target.value)}
+          value={search}
           id="default-search"
           className="block outline-none w-full p-4  mx-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:border-gray-900  focus:text-black"
           placeholder="Search products..."
-          value={search}
+      
         />
       </div>
     </div>
@@ -25,23 +26,3 @@ const SearchInput = () => {
 
 export default SearchInput;
 
-// const SearchInput = ({ setSearch }) => {
-//   return (
-//     <div className="">
-//       <div className="relative w-6/12 mx-auto">
-//         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-//           {searchIcon}
-//         </div>
-//         <input
-//           type="search"
-//           onChange={(e) => setSearch(e.target.value)}
-//           id="default-search"
-//           className="block outline-none w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:border-gray-900  focus:text-black"
-//           placeholder="Search products..."
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default SearchInput;

@@ -1,20 +1,23 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const { login } = useContext(AuthContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
-      console.log({ email, pass });
-      login({ email, pass });
-    } else {
-      alert("Kullanıcı bilgileri yanlış");
-    }
-  };
+const Login = () => {
+  const[ email, setEmail] = useState("")
+  const[ pass, setPass] = useState("")
+
+  const {login} = useContext(AuthContext)
+
+ const handleSubmit = (e) => {
+   e.preventDefault();
+   if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
+     console.log({ email, pass });
+     login({ email, pass });
+   } else {
+     alert("Hatalı giriş yaptınız!");
+   }
+ };
+ 
   return (
     <div className="loginDiv">
       <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-[20px] p-5 flex flex-col justify-center text-center ">
@@ -31,7 +34,7 @@ const Login = () => {
           </p>
         </div>
         <form
-          onSubmit={handleSubmit}
+         onSubmit={handleSubmit}
           className="flex flex-col text-left p-3 gap-5 "
         >
           <div className="flex flex-col gap-2">
@@ -47,7 +50,8 @@ const Login = () => {
               id="email"
               placeholder="Enter your email"
               required
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e)=>setEmail(e.target.value)}
+           
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -63,7 +67,8 @@ const Login = () => {
               id="password"
               placeholder="Enter your password"
               required
-              onChange={(e) => setPass(e.target.value)}
+              onChange={(e)=> setPass(e.target.value)}
+        
             />
           </div>
           <button className="bg-main h-[44px] font-montserrat text-label text-white uppercase hover:opacity-90 rounded-[4px] ">

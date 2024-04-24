@@ -1,8 +1,8 @@
-
-
-import AuthProvider from "./contexts/AuthProvider";
-import ProductProvider from "./contexts/ProductProvider";
+import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./router/AppRouter";
+import AuthProvider from "./contexts/AuthProvider";
+import ProductProvider from "./contexts/ProductProvider"
+
 
 
 

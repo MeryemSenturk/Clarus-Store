@@ -1,30 +1,28 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
-  const navigate = useNavigate();
-  // const { state } = useLocation();//? navigate ile taşınan veriyi useLocation() hooku ile karşılayabiliyoruz. urlde yer alan parametreleri search ile yakalayabiliyoruz.
+const navigate = useNavigate()
+const {id} = useParams()
 
-  const { id } = useParams(); //* dinamik routelardaki parametreyi yakalar. route ayarlaması yaparken ne isim verdiysek useParams ile onu yakalarız.
-  // console.log(params);
+const [state, setState] = useState({})
 
-  const [state, setState] = useState({});
+ const getDetailData = async () => {
+   try {
+     const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
+     setState(data);
 
-  const getDetailData = async () => {
-    try {
-      const { data } = await axios.get(`https://dummyjson.com/products/${id}`);
-      setState(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+   } catch (error) {
+     console.log(error);
+   }
+ };
 
-  useEffect(() => {
-    getDetailData();
-  }, []);
+ useEffect(() => {
+   getDetailData();
+ }, []);
 
-  const { thumbnail, title, description, category, price, images } = state;
+   const { thumbnail, title, description, category, price, images } = state;
   return (
     <div className="mx-auto max-w-2xl px-4 pt-8 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <div className="mt-6 w-full ">
@@ -37,7 +35,7 @@ const ProductDetail = () => {
                 alt=""
               />
             </div>
-            <div className="grid grid-cols-3 gap-4 row-span-1">
+            <div className="grid grid-cols-3 gap-4 row-span-1"> //! detayda sabit 3 resim getirsin.
               {images?.slice(0, 3).map((item, i) => (
                 <div key={i}>
                   <img
@@ -82,6 +80,6 @@ const ProductDetail = () => {
       </div>
     </div>
   );
-};
+}
 
-export default ProductDetail;
+export default ProductDetail

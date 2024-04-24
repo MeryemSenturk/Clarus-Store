@@ -1,10 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
+import { useNavigate } from "react-router-dom";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({product}) => {
   const { title, category, thumbnail, price, id } = product;
-  const navigate = useNavigate();
+   const navigate = useNavigate();
+
   return (
     <>
       <div
