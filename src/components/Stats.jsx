@@ -19,11 +19,11 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-14">
+    <section className="py-10">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-            Our customers are always happy
+          <h3 className=" text-3xl font-semibold sm:text-4xl text-[#4d2675]">
+            We are a huge family
           </h3>
           <p className="mt-3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
