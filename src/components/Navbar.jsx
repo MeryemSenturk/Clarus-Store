@@ -42,17 +42,16 @@ export default function Example() {
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" /> 
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
                     <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                   )}
-                  
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
+              <div className="flex flex-1 ml-8 sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 md[5px] sm[2px]">
                   <img
-                    className="h-8 w-auto"
+                    className="h-8 w-auto md[5px] sm[2px]"
                     src="https://vectorseek.com/wp-content/uploads/2023/08/The-Store-Logo-Vector.svg-.png"
                     alt="The Store"
                   />
@@ -77,7 +76,8 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+              <div className="absolute inset-y-0 right-0 flex items-center pr-1 sm:static sm:inset-auto sm:ml-10 sm:pr-0">
                 <button
                   type="button"
                   className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
@@ -89,12 +89,12 @@ export default function Example() {
 
                 {/* Logout */}
 
-                <div className="flex-1 gap-x-6 items-center justify-end space-y-6 md:flex md:space-y-0 md:mt-0">
+                <div className="flex-1 items-center justify-end space-y-6 md:flex md:space-y-0 md:mt-0">
                   <NavLink
                     onClick={() => logout()}
-                    className=" text-decoration-none flex items-center justify-center gap-x-1 py-2 px-4 ml-2  font-medium text-gray-700 hover:bg-main hover:text-white active:bg-gray-900 rounded-full md:inline-flex"
+                    className=" text-decoration-none flex items-center justify-center py-2  font-medium text-gray-700 hover:bg-main hover:text-white active:bg-gray-900 rounded-full md:inline-flex"
                   >
-                    Logout {logoutIcon}
+                    {logoutIcon}
                   </NavLink>
                 </div>
               </div>
