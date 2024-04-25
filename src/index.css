@@ -6,19 +6,23 @@
 
 @layer components {
     .loginDiv {
-        background: linear-gradient(71deg, #FEAF00 19.35%, #F8D442 90.12%);
+        background: linear-gradient(71deg, #c9d6ff, #e2e2e2);
+        color: #4d2675;
         @apply flex justify-center items-center min-h-screen;
     }
 
     .login-input {
         height: 44px;
         border-radius: 4px;
-        border: 1px solid #e5e5e5;
+        border: 1px solid #c9d6ff;
         padding: 0.6rem;
         @apply focus:outline-main focus:caret-main
     }
     .login-input::placeholder{
         color: #CDCDCD;
         @apply font-montserrat text-[12px] font-[400]
+    }
+    .long{
+        background: linear-gradient(#062ddd, #764ba2);
     }
 }

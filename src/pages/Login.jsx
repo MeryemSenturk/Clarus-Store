@@ -10,7 +10,7 @@ const Login = () => {
 
  const handleSubmit = (e) => {
    e.preventDefault();
-   if (email.toLocaleLowerCase() === "admin@aa.com" && pass === "admin") {
+   if (email.toLocaleLowerCase() === "xyz@aa.com" && pass === "xyz") {
      console.log({ email, pass });
      login({ email, pass });
    } else {
@@ -20,26 +20,25 @@ const Login = () => {
  
   return (
     <div className="loginDiv">
-      <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-[20px] p-5 flex flex-col justify-center text-center ">
+      <span className="w-[10px] h-[500px] long "></span>
+      <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-r-[20px] p-5 flex flex-col justify-center text-center ">
         <div className="flex justify-center items-center mt-2 gap-2 pt-4">
-          <span className="w-[6px] h-[33px] bg-yellow-500 "></span>
           <h1 className="text-[22px] sm:text-[32px] font-montserrat font-[700] uppercase pt-1">
-            Clarus Store
+            Store App
           </h1>
         </div>
         <div className="my-1">
-          <h3 className="font-montserrat font-[600] text-[22px] ">SIGN IN</h3>
           <p className="font-montserrat text-labelColor text-label mt-1">
-            Enter your credentials to access your account
+            Sign in to your account
           </p>
         </div>
         <form
-         onSubmit={handleSubmit}
+          onSubmit={handleSubmit}
           className="flex flex-col text-left p-3 gap-5 "
         >
           <div className="flex flex-col gap-2">
             <label
-              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
+              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['xyz@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
               htmlFor="email"
             >
               Email
@@ -50,13 +49,12 @@ const Login = () => {
               id="email"
               placeholder="Enter your email"
               required
-              onChange={(e)=>setEmail(e.target.value)}
-           
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="flex flex-col gap-2">
             <label
-              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['admin@aa.com'] hover:after:text-black hover:after:pl-3 hover:after:underline"
+              className="font-montserrat text-label text-labelColor hover:cursor-pointer hover:after:content-['xyz'] hover:after:text-black hover:after:pl-3 hover:after:underline"
               htmlFor="password"
             >
               Password
@@ -67,8 +65,7 @@ const Login = () => {
               id="password"
               placeholder="Enter your password"
               required
-              onChange={(e)=> setPass(e.target.value)}
-        
+              onChange={(e) => setPass(e.target.value)}
             />
           </div>
           <button className="bg-main h-[44px] font-montserrat text-label text-white uppercase hover:opacity-90 rounded-[4px] ">
@@ -76,10 +73,10 @@ const Login = () => {
           </button>
           <p className="flex justify-center items-center flex-wrap pb-2">
             <span className="text-label font-montserrat font-[400] text-labelColor">
-              Forgot your password?
+              Not a member?
             </span>
-            <span className="text-main text-[14px] font-montserrat font-[500] underline ml-1 ">
-              Reset password
+            <span className="text-main text-[14px] font-montserrat font-[500] ml-1 ">
+              Start a 14 day free trial
             </span>
           </p>
         </form>
