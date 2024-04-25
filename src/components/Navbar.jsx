@@ -1,7 +1,6 @@
-import React, { useContext, useState } from "react";
-import logo from "../assets/logo.png";
-import { NavLink, useLocation } from "react-router-dom";
-import { closeNavbar, logoutIcon, openNavbar } from "../helper/icons";
+import React, { useContext} from "react";
+import { NavLink} from "react-router-dom";
+import {logoutIcon} from "../helper/icons";
 import { AuthContext } from "../contexts/AuthProvider";
 
 import { Fragment } from 'react'

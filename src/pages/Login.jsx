@@ -75,7 +75,7 @@ const Login = () => {
             <span className="text-label font-montserrat font-[400] text-labelColor">
               Not a member?
             </span>
-            <span className="text-main text-[14px] font-montserrat font-[500] ml-1 ">
+            <span className="text-main text-[14px] font-montserrat font-[500] ml-1 cursor-pointer ">
               Start a 14 day free trial
             </span>
           </p>
