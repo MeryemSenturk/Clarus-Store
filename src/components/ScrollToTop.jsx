@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import scrollTopIcon from "../assets/scrollup.png";
+import scrollTopIcon from "../assets/scrollup-removebg-preview.png";
 
 export default function ScrollToTop() {
   const { pathname } = useLocation();

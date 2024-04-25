@@ -35,7 +35,7 @@ const [state, setState] = useState({})
                 alt=""
               />
             </div>
-            <div className="grid grid-cols-3 gap-4 row-span-1"> //! detayda sabit 3 resim getirsin.
+            <div className="grid grid-cols-3 gap-4 row-span-1"> 
               {images?.slice(0, 3).map((item, i) => (
                 <div key={i}>
                   <img

@@ -22,11 +22,13 @@ const Testimonial = ()=> {
           <figcaption className="mt-10">
             <img
               className="mx-auto h-10 w-10 rounded-full"
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_zX38KaJpj7a6_ZH9NNuBLEOxIEqNbbEQ1moFx3li7Q&s"
               alt=""
             />
             <div className="mt-4 flex items-center justify-center space-x-3 text-base">
-              <div className="font-semibold text-gray-900">Judith Black</div>
+              <div className="font-semibold text-gray-900">
+                Leslie Alexander
+              </div>
               <svg
                 viewBox="0 0 2 2"
                 width={3}

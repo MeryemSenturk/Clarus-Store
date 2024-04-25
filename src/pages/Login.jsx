@@ -24,7 +24,7 @@ const Login = () => {
       <div className="h-[500px] w-11/12 sm:w-[475px] bg-white rounded-r-[20px] p-5 flex flex-col justify-center text-center ">
         <div className="flex justify-center items-center mt-2 gap-2 pt-4">
           <h1 className="text-[22px] sm:text-[32px] font-montserrat font-[700] uppercase pt-1">
-            Store App
+           The Store App
           </h1>
         </div>
         <div className="my-1">

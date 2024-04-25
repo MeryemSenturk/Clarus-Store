@@ -12,16 +12,16 @@ const ProductCard = ({product}) => {
         className="cursor-pointer"
         onClick={() => navigate(`${id}`, { state: product })}
       >
-        <div className="w-full rounded-md bg-gray-200 hover:opacity-75 lg:h-80">
+        <div className="w-full rounded-md hover:opacity-75 lg:h-80">
           <img
             src={thumbnail}
             alt={title}
             title={"title"}
-            className="h-[200px] w-full object-fit lg:h-full lg:w-full"
+            className="h-[200px] w-full object-fit lg:h-full lg:w-full rounded-t-[20px]"
           />
         </div>
-        <div className="mt-4 flex justify-between">
-          <div className="flex-1">
+        <div className="mt-4 flex justify-between bg-pink-100 rounded-b-[20px] p-2">
+          <div className="flex-1 ">
             <h3 className="text-sm text-gray-700 line-clamp-1">{title}</h3>
             <p className="mt-1 text-sm text-gray-500 line-clamp-1">
               {category}
