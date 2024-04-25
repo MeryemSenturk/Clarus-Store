@@ -25,4 +25,17 @@
     .long{
         background: linear-gradient(#062ddd, #764ba2);
     }
+
+    .stats{
+        background: linear-gradient(71deg, #c9d6ff, #e2e2e2);
+    }
+
+    .productsPage{
+          background: linear-gradient(71deg, #c9d6ff, #e2e2e2);
+           @apply min-h-screen;
+    }
+
+    .productCard{
+         background: linear-gradient(71deg, #c9d6ff, #e2e2e2);
+    }
 }

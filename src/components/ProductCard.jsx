@@ -9,7 +9,7 @@ const ProductCard = ({product}) => {
   return (
     <>
       <div
-        className="cursor-pointer"
+        className="productCard cursor-pointer rounded-[20px]"
         onClick={() => navigate(`${id}`, { state: product })}
       >
         <div className="w-full rounded-md hover:opacity-75 lg:h-80">
@@ -20,7 +20,7 @@ const ProductCard = ({product}) => {
             className="h-[200px] w-full object-fit lg:h-full lg:w-full rounded-t-[20px]"
           />
         </div>
-        <div className="mt-4 flex justify-between bg-pink-100 rounded-b-[20px] p-2">
+        <div className="mt-2 flex justify-between bg-gray-100 rounded-b-[20px] p-1">
           <div className="flex-1 ">
             <h3 className="text-sm text-gray-700 line-clamp-1">{title}</h3>
             <p className="mt-1 text-sm text-gray-500 line-clamp-1">

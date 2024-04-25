@@ -11,7 +11,6 @@
 - HTML
 - JavaScript
 - ReactJS
-- Bootstrap
 - Tailwind
 
 
